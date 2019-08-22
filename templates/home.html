@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Работает</title>
+</head>
+<body>
+    <h1>Счётчик слов!</h1>
+    <!-- <p>Как Django работает?</p>
+    <ul>
+        <li>В urls.py прописываются все страницы сайта</li>
+        <li>Из urls.py делается запрос к функциям, которые возвращают html</li>
+    </ul> -->
+    <form action="{% url 'count' %}">
+        <textarea name="fulltext" id="" cols="40" rows="5"></textarea>
+        <input type="submit" value="Посчитать!">
+    </form>
+    <a href="{% url 'about' %}">Что это такое?</a>
+</body>
+</html>

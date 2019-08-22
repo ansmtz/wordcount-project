@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Сделано!</title>
+</head>
+<body>
+    <a href="{% url 'home'%}">Вернуться на главную</a>
+    <p>Текст: {{fulltext}}</p>
+    <p>Количество слов: {{length}}</p>
+    <ul>
+    {% for word, count in count_pairs_sorted %}
+    <li>Слово <em>"{{word}}"</em> встречается в тексте {{count}} раз</li>
+    {% endfor %}
+</body>
+</html>
